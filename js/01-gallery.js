@@ -31,16 +31,19 @@ function createMarkup(array) {
 function handleClick(event) {
   event.preventDefault();
 
+
   if (event.target === event.currentTarget) {
     return;
   }
+  console.log(event.target.closest(".gallery__link"));
+  
+  const galleryModal = event.target.closest(".gallery__link").href ;
 
-  const galleryModal = event.target.closest(".gallery_link").href ;
+
 
   const galleryLightBox = basicLightbox.create(`
- <img class = gallery__image src = "${galleryModal}"
-  width = "800" height= ">
+ <img class = gallery__image src = "${galleryModal}">
  `);
 
  galleryLightBox.show();
-}
+};
