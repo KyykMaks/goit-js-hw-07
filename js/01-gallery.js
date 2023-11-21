@@ -35,7 +35,7 @@ function handleClick(event) {
   if (event.target === event.currentTarget) {
     return;
   }
-  console.log(event.target.closest(".gallery__link"));
+  // console.log(event.target.closest(".gallery__link"));
   
   const galleryModal = event.target.closest(".gallery__link").href ;
 

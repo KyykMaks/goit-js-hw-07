@@ -6,7 +6,7 @@ console.log(galleryItems);
 const galerryEl = document.querySelector(".gallery");
 
 galerryEl.insertAdjacentHTML("beforeend", createMarkup(galleryItems));
-galerryEl.addEventListener("click", handleClick);
+
 
 function createMarkup(array) {  
   return array  
@@ -24,16 +24,7 @@ function createMarkup(array) {
     .join(" ");  
 }
 
-function handleClick(event) {
-  event.preventDefault();
-
-  if (event.target === event.currentTarget) {
-    return;
-  }
-
-
   new SimpleLightbox(".gallery__item a", {
     captions: true,
     captionsDay: 250,
   })
-}
